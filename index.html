@@ -65,16 +65,6 @@
             bottom: 0;
             width: 100%;
         }
-
-        .qr-code {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .qr-code img {
-            width: 200px;  /* Ajuste la taille du QR code selon ton besoin */
-            height: 200px;
-        }
     </style>
 </head>
 <body>
@@ -100,12 +90,8 @@
             <h2>Accueil</h2>
             <p>Présentation rapide de l’éco-innovation.</p>
             <button onclick="playAudio()">Écoutez le message audio</button>
-
-            <!-- Intégration du QR Code -->
-            <div class="qr-code">
-                <h3>Scannez ce QR Code :</h3>
-                <img src="https://qrco.de/bfY2N3" alt="QR Code">
-            </div>
+            <!-- Lien vers l'image du QR Code -->
+            <img src="QR%20Code.png" alt="QR Code">
         </section>
 
         <section id="apropos">
@@ -114,8 +100,43 @@
             <p>Objectifs du projet.</p>
         </section>
 
-        <!-- Autres sections ici... -->
+        <section id="problematique">
+            <h2>Problématique Traitée</h2>
+            <p>Description du problème abordé par l'éco-innovation.</p>
+            <p>Données et statistiques pertinentes.</p>
+        </section>
 
+        <section id="finalite">
+            <h2>Finalité du Système</h2>
+            <p>Description du service rendu par l'éco-innovation.</p>
+            <p>Impact environnemental.</p>
+        </section>
+
+        <section id="mission">
+            <h2>Mission du Système</h2>
+            <p>Objectifs spécifiques de l’éco-innovation.</p>
+            <p>Valeurs et engagement de l’équipe.</p>
+        </section>
+
+        <section id="presentation">
+            <h2>Présentation du Système</h2>
+            <p>Détails des composants de l’éco-innovation.</p>
+            <p>Fonctionnement et mécanismes en place.</p>
+            <img src="image-explicative.jpg" alt="Description de l'éco-innovation">
+        </section>
+
+        <section id="odd">
+            <h2>Lien avec les ODD</h2>
+            <p>Inscription de l'éco-innovation dans le cadre des Objectifs de Développement Durable.</p>
+            <p>Exemples de mise en œuvre.</p>
+        </section>
+
+        <section id="multimedia">
+            <h2>Contenus Multimédias</h2>
+            <p>Vidéos explicatives.</p>
+            <p>Infographies interactives.</p>
+            <audio id="audio" src="message-audio.mp3" preload="auto"></audio>
+        </section>
     </main>
 
     <footer>
