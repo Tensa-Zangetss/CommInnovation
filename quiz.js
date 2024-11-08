@@ -1,50 +1,42 @@
 function submitQuiz() {
-    // Réponses correctes
+    const quizForm = document.getElementById("quizForm");
+    const resultDiv = document.getElementById("result");
+    
+    // Stocker les réponses correctes
     const correctAnswers = {
-        q1: 'c', q2: 'a', q3: 'c', q4: 'b', q5: 'c',
-        q6: 'a', q7: 'a', q8: 'b', q9: 'a', q10: 'a',
-        q11: 'a', q12: 'a', q13: 'a', q14: 'a', q15: 'a'
+        q1: "a", // ODD 1 : Pas de pauvreté
+        q2: "a", // ODD 4 : Éducation de qualité
+        q3: "a"  // ODD 8 : Travail décent et croissance économique
+        // Ajoute les bonnes réponses pour les autres questions
     };
-
-    // Initialisation du score
+    
     let score = 0;
     let totalQuestions = Object.keys(correctAnswers).length;
-
-    // Réinitialise les couleurs
-    document.querySelectorAll("label").forEach(label => {
-        label.style.color = ""; // Réinitialise la couleur des labels
-    });
-
-    // Parcours des questions pour vérifier les réponses
+    
+    // Vérifier les réponses
     for (let question in correctAnswers) {
-        let selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-        let correctOption = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`);
-
-        if (selectedOption) {
-            // Vérifie si la réponse sélectionnée est correcte
-            if (selectedOption.value === correctAnswers[question]) {
+        const selectedAnswer = quizForm.querySelector(`input[name="${question}"]:checked`);
+        if (selectedAnswer) {
+            const isCorrect = selectedAnswer.value === correctAnswers[question];
+            
+            // Changer la couleur des réponses
+            const questionDiv = document.querySelector(`div.question:nth-of-type(${Object.keys(correctAnswers).indexOf(question) + 1})`);
+            const labels = questionDiv.querySelectorAll('label');
+            
+            labels.forEach(label => {
+                if (label.querySelector('input').value === correctAnswers[question]) {
+                    label.classList.add('correct');
+                } else {
+                    label.classList.add('incorrect');
+                }
+            });
+            
+            if (isCorrect) {
                 score++;
-                selectedOption.parentElement.style.color = "green"; // Réponse correcte en vert
-            } else {
-                selectedOption.parentElement.style.color = "red"; // Réponse incorrecte en rouge
             }
         }
-
-        // Affiche la bonne réponse en vert
-        if (correctOption) {
-            correctOption.parentElement.style.color = "green";
-        }
     }
-
-    // Affichage du résultat
-    let resultText = `Vous avez obtenu ${score} sur ${totalQuestions} ! `;
-    if (score === totalQuestions) {
-        resultText += "Félicitations, vous avez tout juste ! 🎉";
-    } else if (score >= totalQuestions * 0.7) {
-        resultText += "Très bien joué ! 👏";
-    } else {
-        resultText += "Continuez à réviser, vous pouvez le faire ! 💪";
-    }
-
-    document.getElementById("result").innerText = resultText;
+    
+    // Afficher le résultat
+    resultDiv.innerHTML = `Vous avez obtenu ${score} sur ${totalQuestions} bonnes réponses.`;
 }
