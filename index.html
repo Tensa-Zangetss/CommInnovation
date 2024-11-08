@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil - CommInnovation</title>
+    <title>Quiz - Pergola Bioclimatique Connectée</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="quiz.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur CommInnovation</h1>
+        <h1>Quiz sur la Pergola Bioclimatique Connectée</h1>
         <nav>
             <ul>
                 <li><a href="accueil.html">Accueil</a></li>
@@ -25,13 +26,57 @@
     </header>
 
     <main>
-        <section>
-            <h2>Bienvenue sur notre site dédié à la Pergola Bioclimatique Connectée</h2>
-            <p>Découvrez comment notre innovation transforme l'espace extérieur et améliore votre qualité de vie.</p>
-        </section>
+        <section class="quiz-container">
+            <h2>Testez vos connaissances sur la Pergola Bioclimatique Connectée et son impact sur l'environnement !</h2>
 
-        <section class="image-container">
-            <img src="QR_Code.png" alt="QR Code" class="image-responsive">
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. Quel est l'objectif principal de la pergola bioclimatique connectée ?</p>
+                    <input type="radio" id="question1a" name="question1" value="a">
+                    <label for="question1a">Aider à réduire la consommation énergétique en régulant la température extérieure.</label><br>
+                    <input type="radio" id="question1b" name="question1" value="b">
+                    <label for="question1b">Améliorer l'esthétique des espaces extérieurs.</label><br>
+                    <input type="radio" id="question1c" name="question1" value="c">
+                    <label for="question1c">Créer une source de revenus pour les propriétaires.</label><br>
+                </div>
+
+                <div class="question">
+                    <p>2. La pergola bioclimatique connectée contribue-t-elle à quel(s) Objectif(s) de Développement Durable (ODD) ?</p>
+                    <input type="checkbox" id="question2a" name="question2" value="a">
+                    <label for="question2a">ODD 7 - Énergie propre et d'un coût abordable.</label><br>
+                    <input type="checkbox" id="question2b" name="question2" value="b">
+                    <label for="question2b">ODD 12 - Consommation et production responsables.</label><br>
+                    <input type="checkbox" id="question2c" name="question2" value="c">
+                    <label for="question2c">ODD 5 - Égalité entre les sexes.</label><br>
+                </div>
+
+                <div class="question">
+                    <p>3. Quel est l'un des principaux avantages environnementaux de la pergola bioclimatique connectée ?</p>
+                    <input type="radio" id="question3a" name="question3" value="a">
+                    <label for="question3a">Elle réduit l'empreinte carbone en régulant naturellement la température.</label><br>
+                    <input type="radio" id="question3b" name="question3" value="b">
+                    <label for="question3b">Elle consomme beaucoup d'eau pour irriguer les espaces autour de la pergola.</label><br>
+                    <input type="radio" id="question3c" name="question3" value="c">
+                    <label for="question3c">Elle produit de l'électricité à partir de l'énergie solaire.</label><br>
+                </div>
+
+                <div class="question">
+                    <p>4. Pourquoi le QR code intégré dans l'affiche est-il important ?</p>
+                    <input type="radio" id="question4a" name="question4" value="a">
+                    <label for="question4a">Il permet d'accéder à un contenu multimédia enrichi, tel que des vidéos et des infographies.</label><br>
+                    <input type="radio" id="question4b" name="question4" value="b">
+                    <label for="question4b">Il fournit une carte des prix des pergolas.</label><br>
+                    <input type="radio" id="question4c" name="question4" value="c">
+                    <label for="question4c">Il permet d'acheter directement des pergolas connectées.</label><br>
+                </div>
+
+                <button type="submit" id="submitQuiz">Soumettre le quiz</button>
+            </form>
+
+            <div id="quizResult" style="display: none;">
+                <h3>Résultats :</h3>
+                <p id="score"></p>
+            </div>
         </section>
     </main>
 
