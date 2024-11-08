@@ -3,209 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Objectifs de Développement Durable</title>
+    <title>Quiz sur les ODD</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Styles pour le quiz */
-        #quiz {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-            color: #fff;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        #quiz h2 {
-            color: #f1c40f;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .question {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #333;
-            border-radius: 5px;
-            transition: transform 0.2s;
-        }
-
-        .question:hover {
-            transform: scale(1.02);
-        }
-
-        .question p {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        label {
-            display: block;
-            margin: 5px 0;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            background-color: #f1c40f;
-            color: #222;
-            padding: 10px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #d4a40c;
-        }
-
-        #result {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #f1c40f;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
+
     <header>
-        <h1>Objectifs de Développement Durable</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="apropos.html">À Propos</a></li>
-                <li><a href="problematique.html">Problématique</a></li>
-                <li><a href="finalite.html">Finalité du Système</a></li>
-                <li><a href="mission.html">Mission du Système</a></li>
-                <li><a href="presentation.html">Présentation du Système</a></li>
-                <li><a href="odd.html">Lien avec les ODD</a></li>
-                <li><a href="multimedia.html">Contenus Multimédias</a></li>
-            </ul>
-        </nav>
+        <h1>Quiz sur les Objectifs de Développement Durable (ODD)</h1>
     </header>
-    
+
     <main>
-        <section id="quiz">
-            <h2>Quiz : Testez vos connaissances sur les Objectifs de Développement Durable</h2>
-            <form>
-                <!-- Questions du quiz -->
-                <div class="question">
-                    <p>1. Combien y a-t-il d'Objectifs de Développement Durable (ODD) ?</p>
-                    <label><input type="radio" name="q1" value="c"> 17</label>
-                    <label><input type="radio" name="q1" value="b"> 15</label>
-                    <label><input type="radio" name="q1" value="a"> 10</label>
-                </div>
-
-                <div class="question">
-                    <p>2. Quel ODD concerne l'éducation de qualité ?</p>
-                    <label><input type="radio" name="q2" value="a"> ODD 4</label>
-                    <label><input type="radio" name="q2" value="b"> ODD 7</label>
-                    <label><input type="radio" name="q2" value="c"> ODD 10</label>
-                </div>
-
-                <div class="question">
-                    <p>3. L'ODD 13 traite de :</p>
-                    <label><input type="radio" name="q3" value="a"> La pauvreté</label>
-                    <label><input type="radio" name="q3" value="b"> La vie aquatique</label>
-                    <label><input type="radio" name="q3" value="c"> La lutte contre les changements climatiques</label>
-                </div>
-
-                <div class="question">
-                    <p>4. Quel ODD vise à promouvoir l'égalité des sexes ?</p>
-                    <label><input type="radio" name="q4" value="a"> ODD 3</label>
-                    <label><input type="radio" name="q4" value="b"> ODD 5</label>
-                    <label><input type="radio" name="q4" value="c"> ODD 12</label>
-                </div>
-
-                <div class="question">
-                    <p>5. L'ODD 14 concerne :</p>
-                    <label><input type="radio" name="q5" value="a"> La santé</label>
-                    <label><input type="radio" name="q5" value="b"> La paix et la justice</label>
-                    <label><input type="radio" name="q5" value="c"> La vie aquatique</label>
-                </div>
-
-                <div class="question">
-                    <p>6. Quel est l'objectif de l'ODD 1 ?</p>
-                    <label><input type="radio" name="q6" value="a"> Éliminer la pauvreté</label>
-                    <label><input type="radio" name="q6" value="b"> Accès à l'eau potable</label>
-                    <label><input type="radio" name="q6" value="c"> Réduire les inégalités</label>
-                </div>
-
-                <div class="question">
-                    <p>7. L'ODD 7 vise :</p>
-                    <label><input type="radio" name="q7" value="a"> Les énergies renouvelables</label>
-                    <label><input type="radio" name="q7" value="b"> La biodiversité</label>
-                    <label><input type="radio" name="q7" value="c"> La paix</label>
-                </div>
-
-                <div class="question">
-                    <p>8. L'ODD 2 vise à éliminer :</p>
-                    <label><input type="radio" name="q8" value="a"> La pauvreté</label>
-                    <label><input type="radio" name="q8" value="b"> La faim</label>
-                    <label><input type="radio" name="q8" value="c"> Les inégalités</label>
-                </div>
-
-                <div class="question">
-                    <p>9. Quel ODD concerne l'accès à l'eau potable ?</p>
-                    <label><input type="radio" name="q9" value="a"> ODD 6</label>
-                    <label><input type="radio" name="q9" value="b"> ODD 8</label>
-                    <label><input type="radio" name="q9" value="c"> ODD 11</label>
-                </div>
-
-                <div class="question">
-                    <p>10. L'ODD 9 concerne :</p>
-                    <label><input type="radio" name="q10" value="a"> L'innovation et les infrastructures</label>
-                    <label><input type="radio" name="q10" value="b"> La réduction des inégalités</label>
-                    <label><input type="radio" name="q10" value="c"> L'éducation</label>
-                </div>
-
-                <div class="question">
-                    <p>11. L'ODD 12 concerne :</p>
-                    <label><input type="radio" name="q11" value="a"> La consommation et la production responsables</label>
-                    <label><input type="radio" name="q11" value="b"> La santé et le bien-être</label>
-                    <label><input type="radio" name="q11" value="c"> La pauvreté</label>
-                </div>
-
-                <div class="question">
-                    <p>12. L'ODD 15 concerne :</p>
-                    <label><input type="radio" name="q12" value="a"> La vie terrestre</label>
-                    <label><input type="radio" name="q12" value="b"> Les océans</label>
-                    <label><input type="radio" name="q12" value="c"> L'innovation</label>
-                </div>
-
-                <div class="question">
-                    <p>13. Quel ODD vise la réduction des inégalités ?</p>
-                    <label><input type="radio" name="q13" value="a"> ODD 10</label>
-                    <label><input type="radio" name="q13" value="b"> ODD 4</label>
-                    <label><input type="radio" name="q13" value="c"> ODD 15</label>
-                </div>
-
-                <div class="question">
-                    <p>14. L'ODD 11 vise à rendre les villes :</p>
-                    <label><input type="radio" name="q14" value="a"> Plus inclusives et durables</label>
-                    <label><input type="radio" name="q14" value="b"> Plus riches</label>
-                    <label><input type="radio" name="q14" value="c"> Plus petites</label>
-                </div>
-
-                <div class="question">
-                    <p>15. L'ODD 16 promeut :</p>
-                    <label><input type="radio" name="q15" value="a"> La paix et la justice</label>
-                    <label><input type="radio" name="q15" value="b"> La vie terrestre</label>
-                    <label><input type="radio" name="q15" value="c"> L'énergie durable</label>
-                </div>
-
-                <button type="button" onclick="submitQuiz()">Soumettre le quiz</button>
-            </form>
-            <div id="result"></div>
-        </section>
+        <form id="quizForm">
+            <div class="question">
+                <h2>1. Quel est l'ODD visant à éradiquer la pauvreté dans le monde ?</h2>
+                <label>
+                    <input type="radio" name="q1" value="a"> a) ODD 1 : Pas de pauvreté
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="b"> b) ODD 2 : Faim zéro
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="c"> c) ODD 3 : Bonne santé et bien-être
+                </label>
+            </div>
+            <div class="question">
+                <h2>2. Quel ODD concerne l'accès à une éducation de qualité pour tous ?</h2>
+                <label>
+                    <input type="radio" name="q2" value="a"> a) ODD 4 : Éducation de qualité
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="b"> b) ODD 5 : Égalité entre les sexes
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="c"> c) ODD 6 : Eau propre et assainissement
+                </label>
+            </div>
+            <div class="question">
+                <h2>3. Quel ODD vise à promouvoir la croissance économique soutenue et inclusive ?</h2>
+                <label>
+                    <input type="radio" name="q3" value="a"> a) ODD 8 : Travail décent et croissance économique
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="b"> b) ODD 9 : Industrie, innovation et infrastructure
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="c"> c) ODD 10 : Réduction des inégalités
+                </label>
+            </div>
+            <!-- Ajoutez les autres questions ici -->
+            
+            <button type="button" onclick="submitQuiz()">Soumettre</button>
+        </form>
+        
+        <div id="result"></div>
     </main>
 
     <footer>
-        <p>© 2024 CommInnovation. Tous droits réservés.</p>
+        <p>&copy; 2024 CommInnovation. Tous droits réservés.</p>
     </footer>
 
     <script src="quiz.js"></script>
