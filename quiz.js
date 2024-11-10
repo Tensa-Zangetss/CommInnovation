@@ -1,42 +1,54 @@
+// Fonction pour basculer la visibilité de la sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuToggle = document.getElementById("menu-toggle");
+
+    // Basculer la classe "open" et "closed" de la sidebar
+    sidebar.classList.toggle("open");
+    sidebar.classList.toggle("closed");
+
+    // Changer l'icône du menu hamburger en croix lorsque la sidebar est ouverte
+    menuToggle.classList.toggle("open");
+}
+
+// Ajouter l'écouteur d'événements pour le bouton de bascule
+document.getElementById("menu-toggle").addEventListener("click", toggleSidebar);
+
+// Fonction pour soumettre le quiz
 function submitQuiz() {
-    // Réponses correctes
     const correctAnswers = {
         q1: 'c', q2: 'a', q3: 'c', q4: 'b', q5: 'c',
         q6: 'a', q7: 'a', q8: 'b', q9: 'a', q10: 'a',
         q11: 'a', q12: 'a', q13: 'a', q14: 'a', q15: 'a'
     };
 
-    // Initialisation du score
     let score = 0;
     let totalQuestions = Object.keys(correctAnswers).length;
 
-    // Réinitialise les couleurs
+    // Réinitialiser la couleur des labels
     document.querySelectorAll("label").forEach(label => {
-        label.style.color = ""; // Réinitialise la couleur des labels
+        label.style.color = ""; 
     });
 
-    // Parcours des questions pour vérifier les réponses
+    // Vérifier les réponses
     for (let question in correctAnswers) {
         let selectedOption = document.querySelector(`input[name="${question}"]:checked`);
         let correctOption = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`);
 
         if (selectedOption) {
-            // Vérifie si la réponse sélectionnée est correcte
             if (selectedOption.value === correctAnswers[question]) {
                 score++;
-                selectedOption.parentElement.style.color = "green"; // Réponse correcte en vert
+                selectedOption.parentElement.style.color = "green"; 
             } else {
-                selectedOption.parentElement.style.color = "red"; // Réponse incorrecte en rouge
+                selectedOption.parentElement.style.color = "red"; 
             }
         }
 
-        // Affiche la bonne réponse en vert
         if (correctOption) {
             correctOption.parentElement.style.color = "green";
         }
     }
 
-    // Affichage du résultat
     let resultText = `Vous avez obtenu ${score} sur ${totalQuestions} ! `;
     if (score === totalQuestions) {
         resultText += "Félicitations, vous avez tout juste ! 🎉";
