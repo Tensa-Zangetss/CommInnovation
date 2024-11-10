@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Accueil - Objectifs de Développement Durable</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que votre fichier CSS est bien lié -->
 </head>
 <body>
-
-    <!-- Bouton de menu (toggle) pour la sidebar -->
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div id="sidebar" class="sidebar closed">
+        <h2>Navigation</h2>
         <a href="index.html">Accueil</a>
         <a href="apropos.html">À Propos</a>
         <a href="problematique.html">Problématique</a>
@@ -25,6 +18,13 @@
         <a href="presentation.html">Présentation du Système</a>
         <a href="odd.html">Lien avec les ODD</a>
         <a href="multimedia.html">Contenus Multimédias</a>
+    </div>
+
+    <!-- Menu Toggle Button (Hamburger Icon) -->
+    <div id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
     <!-- Contenu principal -->
