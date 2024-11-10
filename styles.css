@@ -251,3 +251,23 @@ img:hover {
 .submit-button:focus {
     outline: none;
 }
+/* La sidebar est cachée par défaut */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Elle est positionnée hors de l'écran */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    transition: 0.3s;
+}
+
+/* Quand la sidebar est ouverte, elle se déplace sur l'écran */
+.sidebar.open {
+    left: 0;
+}
+
+/* Menu hamburger */
+.menu-toggle.open {
+    transform: rotate(45deg);
+}
