@@ -60,3 +60,14 @@ function submitQuiz() {
 
     document.getElementById("result").innerText = resultText;
 }
+
+// Code pour afficher/masquer la sidebar sur mobile
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        menuToggle.classList.toggle('open');
+    });
+});
