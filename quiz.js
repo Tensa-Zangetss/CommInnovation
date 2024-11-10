@@ -32,8 +32,8 @@ function submitQuiz() {
 
     // Vérifier les réponses
     for (let question in correctAnswers) {
-        let selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-        let correctOption = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`);
+        let selectedOption = document.querySelector(input[name="${question}"]:checked);
+        let correctOption = document.querySelector(input[name="${question}"][value="${correctAnswers[question]}"]);
 
         if (selectedOption) {
             if (selectedOption.value === correctAnswers[question]) {
@@ -49,7 +49,7 @@ function submitQuiz() {
         }
     }
 
-    let resultText = `Vous avez obtenu ${score} sur ${totalQuestions} ! `;
+    let resultText = Vous avez obtenu ${score} sur ${totalQuestions} ! ;
     if (score === totalQuestions) {
         resultText += "Félicitations, vous avez tout juste ! 🎉";
     } else if (score >= totalQuestions * 0.7) {
@@ -60,14 +60,3 @@ function submitQuiz() {
 
     document.getElementById("result").innerText = resultText;
 }
-
-// Code pour afficher/masquer la sidebar sur mobile
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    menuToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('open');
-        menuToggle.classList.toggle('open');
-    });
-});
