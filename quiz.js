@@ -1,20 +1,15 @@
-// Fonction pour basculer la visibilité de la sidebar
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const menuToggle = document.getElementById("menu-toggle");
 
-    // Basculer la classe "open" et "closed" de la sidebar
     sidebar.classList.toggle("open");
     sidebar.classList.toggle("closed");
 
-    // Changer l'icône du menu hamburger en croix lorsque la sidebar est ouverte
     menuToggle.classList.toggle("open");
 }
 
-// Ajouter l'écouteur d'événements pour le bouton de bascule
 document.getElementById("menu-toggle").addEventListener("click", toggleSidebar);
 
-// Fonction pour soumettre le quiz
 function submitQuiz() {
     const correctAnswers = {
         q1: 'c', q2: 'a', q3: 'c', q4: 'b', q5: 'c',
@@ -25,12 +20,10 @@ function submitQuiz() {
     let score = 0;
     let totalQuestions = Object.keys(correctAnswers).length;
 
-    // Réinitialiser la couleur des labels
     document.querySelectorAll("label").forEach(label => {
         label.style.color = ""; 
     });
 
-    // Vérifier les réponses
     for (let question in correctAnswers) {
         let selectedOption = document.querySelector(`input[name="${question}"]:checked`);
         let correctOption = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`);
