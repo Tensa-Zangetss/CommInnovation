@@ -20,7 +20,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('fleurs-floues.jpg'); /* Remplace par ton chemin d'image */
+    background-image: url('fleurs-floues.jpg'); 
     background-size: cover;
     background-position: center;
     filter: blur(5px); /* Applique un flou à l'image */
