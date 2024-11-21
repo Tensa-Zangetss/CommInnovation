@@ -23,7 +23,7 @@ body:before {
     background-image: url('fleurs-floues.jpg'); 
     background-size: cover;
     background-position: center;
-    filter: blur(2px); /* Applique un flou à l'image */
+    filter: blur(0px); /* Applique un flou à l'image */
     z-index: -1; /* Place derrière le contenu */
 }
 
